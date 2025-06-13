@@ -1,0 +1,57 @@
+basic:
+    name: 'Clone Check'
+    environments:
+        production: 'https://renovateindia.co/'
+        staging: 'https://lp.renovateindia.co/'
+        development: ''
+    basicAuth:
+        production: { user: '', password: '' }
+        staging: { user: '', password: '' }
+        development: null
+    breakpoints:
+        - 640
+        - 1024
+        - 1200
+    pages:
+        - /
+        - /ngo-overview
+        - /research-overview
+        - /ev-overview
+        - /pdms-overview
+        - /csr-funding
+        - /our-story
+        - /our-team
+        - /contact-us
+        - /recent-events
+        - '/contact-us/?inquiry_type=As%20an%20NGO'
+        - '/contact-us/?inquiry_type=As%20an%20Associate'
+        - '/contact-us/?inquiry_type=As%20a%20Volunteer'
+        - '/contact-us/?inquiry_type=For%20Job'
+    monitoring:
+        days: {  }
+        type: ''
+        schedule_time: '12:30 AM'
+        schedule_time_zone: Europe/London
+        compare_with: last-production
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    delay: 15
+    scroll: true
+    headers:
+        - { header: '', value: '' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content: ''
+    sensitivity: 15
+    night_mode: false
+    retina_images: false
+    single_ip: false
+    performance:
+        workers_production: 30
+        workers_nonproduction: 10
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
